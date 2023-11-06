@@ -1,39 +1,106 @@
 <!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP3</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+  <html>
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <script src="js/bootstrap.bundle.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TP3</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp3</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-        <div class="container">
-            <!-- Content here -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+    <style>
+      body {
+        background-color: #e9ebee;
+        font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+        font-size: 16px;
+        margin: 0 auto;
+        max-width: 800px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/formvalidation.js"></script>
+
+
+  </head>
+
+  <body>
+    <h1>tp3-BOOTSTARP</h1>
+
+
+
+    <form class="row g-3  " method="post" action="">
+      <div class="col-md-6">
+        <label for="inputNom4" class="form-label">Nom</label>
+        <input type="Nom" class="form-control" id="nom">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPrénom4" class="form-label">Prénom</label>
+        <input type="prénom" class="form-control" id="prénom">
+      </div>
+      <div class="col-12">
+        <label for="inputnaissance" class="form-label">date de naissance </label>
+        <input type="date" class="form-control" id="naissance">
+      </div>
+      <div class="col-12">
+        <label for="inputadress" class="form-label">Address </label>
+        <input type="text" class="form-control" id="Address" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email </label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="col-12">
+        <button type="submit" id="submit" class="btn btn-primary">Envoyer</button>
+      </div>
+    </form>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Attention !</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-    </body>
-</html>
+          <center>
+            <div class="modal-body">
+              <h1> Tous les champs sont obligatoires.</h1>
+            </div>
+          </center>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="fermer();">OK</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModal123">Détails de la personne</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Prénom :</strong> <span id="modalFirstName"></span></p>
+            <p><strong>Date de naissance :</strong> <span id="modalBirthday"></span></p>
+            <p><strong>Adresse :</strong> <span id="modalAddress"></span></p>
+            <img src="" alt="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  </html>
+</div>
